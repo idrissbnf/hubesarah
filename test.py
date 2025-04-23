@@ -25,38 +25,41 @@ st.markdown("""
         padding: 10px;
         border-radius: 20px;
     }
+    /* More specific button styling with !important flags */
     .stButton > button {
-        border-radius: 50px;
-        padding: 12px 0;
-        width: 100%;
-        font-size: 1.1rem;
-        margin: 5px auto;
-        display: block;
+        border-radius: 50px !important;
+        padding: 12px 0 !important;
+        width: 100% !important;
+        font-size: 1.1rem !important;
+        margin: 5px auto !important;
+        display: block !important;
+        border: none !important;
     }
     .yes-btn > button {
-        background-color: #e83e8c;
-        color: white;
+        background-color: #e83e8c !important;
+        color: white !important;
     }
     .no-btn > button {
-        background-color: #6c757d;
-        color: white;
+        background-color: #6c757d !important;
+        color: white !important;
     }
     .game-btn > button {
-        background-color: #4CAF50;
-        color: white;
+        background-color: #4CAF50 !important;
+        color: white !important;
     }
     .back-btn > button {
-        background-color: #6c757d;
-        color: white;
+        background-color: #6c757d !important;
+        color: white !important;
     }
     .whatsapp-btn > button {
-        background-color: #25D366;
-        color: white;
+        background-color: #25D366 !important;
+        color: white !important;
     }
     .camera-btn > button {
-        background-color: #e83e8c;
-        color: white;
+        background-color: #e83e8c !important;
+        color: white !important;
     }
+    /* Rest of your styles */
     .heart {
         font-size: 2.5rem;
         text-align: center;
@@ -64,7 +67,7 @@ st.markdown("""
         animation: pulse 1.5s infinite;
     }
     .container {
-        background-color: white;
+        background-color: white !important;
         border-radius: 20px;
         padding: 20px 10px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -75,18 +78,19 @@ st.markdown("""
     .question {
         font-size: 1.5rem;
         margin: 20px 0;
-        color: #333;
+        color: #333 !important;
         text-align: center;
     }
     .game-card {
-        background-color: #f8f9fa;
+        background-color: #f8f9fa !important;
         border-radius: 15px;
         padding: 15px;
         margin: 15px 0;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #333 !important;
     }
     .game-title {
-        color: #e83e8c;
+        color: #e83e8c !important;
         font-size: 1.4rem;
         margin-bottom: 10px;
         text-align: center;
@@ -94,23 +98,24 @@ st.markdown("""
     .game-description {
         font-size: 1rem;
         margin-bottom: 15px;
-        color: #495057;
+        color: #495057 !important;
         text-align: center;
     }
     .game-question {
         font-size: 1.1rem;
         font-weight: bold;
         margin: 10px 0;
-        color: #212529;
+        color: #212529 !important;
         text-align: center;
     }
     .result-text {
         font-size: 1.3rem;
         text-align: center;
         margin: 10px 0;
+        color: #212529 !important;
     }
     h1 {
-        color: #e83e8c;
+        color: #e83e8c !important;
         text-align: center;
         font-size: 1.8rem;
     }
@@ -121,8 +126,8 @@ st.markdown("""
     }
     .whatsapp-link {
         display: inline-block;
-        background-color: #25D366;
-        color: white;
+        background-color: #25D366 !important;
+        color: white !important;
         text-decoration: none;
         padding: 10px 20px;
         border-radius: 50px;
@@ -132,11 +137,26 @@ st.markdown("""
     .stTextArea textarea {
         border-radius: 15px;
         padding: 10px;
+        color: #333 !important;
+        background-color: #fff !important;
+    }
+    /* Override dark mode settings */
+    [data-testid="stForm"] {
+        background-color: #FFFFFF !important;
+    }
+    [data-testid="stVerticalBlock"] {
+        background-color: #FFFFFF !important;
+    }
+    [data-testid="stHorizontalBlock"] {
+        background-color: #FFFFFF !important;
+    }
+    [data-testid="element-container"] {
+        background-color: #FFFFFF !important;
     }
     /* Ensure light mode is always used */
     body {
-        background-color: #FFFFFF;
-        color: #333333;
+        background-color: #FFFFFF !important;
+        color: #333333 !important;
     }
     .stApp {
         background-color: #FFFFFF !important;
@@ -147,8 +167,8 @@ st.markdown("""
             display: none;
         }
         .stButton > button {
-            font-size: 1rem;
-            padding: 10px 0;
+            font-size: 1rem !important;
+            padding: 10px 0 !important;
         }
     }
     /* Override any dark mode settings */
@@ -163,6 +183,15 @@ st.markdown("""
         0% { transform: scale(1); }
         50% { transform: scale(1.1); }
         100% { transform: scale(1); }
+    }
+    /* Force light text for dark backgrounds */
+    button {
+        color: white !important;
+    }
+    /* Improved dark mode override for text area */
+    textarea {
+        color: #333 !important;
+        background-color: #fff !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -321,7 +350,7 @@ with st.container():
         # Display an embedded placeholder image instead of URL (more reliable)
         
         st.markdown('<div style="display: flex; justify-content: center;">', unsafe_allow_html=True)
-        st.image("WhatsApp Image 2025-04-22 at 15.51.00_0485fd70.jpg", caption="", width=250)
+        st.image("C:/Users/surface/Desktop/againhubesarah/image/WhatsApp Image 2025-04-22 at 15.51.00_0485fd70.jpg", caption="", width=250)
         st.markdown('</div>', unsafe_allow_html=True)
 
         st.markdown('<div class="heart">❤️</div>', unsafe_allow_html=True)
